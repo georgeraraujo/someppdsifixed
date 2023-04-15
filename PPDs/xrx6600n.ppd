@@ -73,15 +73,19 @@
 *% UI Constraints
 
 *% Media size v/s Tray Constraints
+*UIConstraints: *PageSize Env10 *InputSlot AutoSelect
 *UIConstraints: *PageSize Env10 *InputSlot Tray1
 *UIConstraints: *PageSize Env10 *InputSlot Tray2
 
+*UIConstraints: *PageSize EnvMonarch *InputSlot AutoSelect
 *UIConstraints: *PageSize EnvMonarch *InputSlot Tray1
 *UIConstraints: *PageSize EnvMonarch *InputSlot Tray2
 
+*UIConstraints: *PageSize EnvDL *InputSlot AutoSelect
 *UIConstraints: *PageSize EnvDL *InputSlot Tray1
 *UIConstraints: *PageSize EnvDL *InputSlot Tray2
 
+*UIConstraints: *PageSize EnvC5 *InputSlot AutoSelect
 *UIConstraints: *PageSize EnvC5 *InputSlot Tray1
 *UIConstraints: *PageSize EnvC5 *InputSlot Tray2
 
@@ -187,9 +191,11 @@
 *UIConstraints :*MediaType Auto *PageSize EnvC5
 
 *%	Media type v/s  Tray Constraints
+*UIConstraints: *MediaType Envelope *InputSlot  AutoSelect
 *UIConstraints: *MediaType Envelope *InputSlot  Tray1
 *UIConstraints: *MediaType Envelope *InputSlot  Tray2
 
+*UIConstraints: *MediaType Labels *InputSlot  AutoSelect
 *UIConstraints: *MediaType Labels *InputSlot  Tray1
 *UIConstraints: *MediaType Labels *InputSlot  Tray2
 
@@ -301,7 +307,8 @@
 
 *OpenUI *InputSlot/InputSlot: PickOne
 *OrderDependency: 10 AnySetup *InputSlot
-*DefaultInputSlot: Tray1
+*DefaultInputSlot: AutoSelect
+*InputSlot AutoSelect/Auto: "<< (automatic) xerox$MediaInputTray >> setpagedevice"
 *InputSlot Tray1/Tray 1: "<< (tray-1) xerox$MediaInputTray >> setpagedevice"
 *InputSlot Tray2/Tray 2: "<< (tray-2) xerox$MediaInputTray >> setpagedevice"
 *InputSlot Bypass/Bypass Tray: "<< (bypass-tray) xerox$MediaInputTray >> setpagedevice"
